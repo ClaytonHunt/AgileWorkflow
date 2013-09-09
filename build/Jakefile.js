@@ -1,15 +1,15 @@
-"use strict";
-
 desc("Build Everything");
-task("default", ["dependency"], function () {
+task("default", [], function () {
     console.log("");
     console.log(colors.green + "------");
     console.log("* OK *");
     console.log("------" + colors.reset);
 });
 
-task("dependency", function () {
-    console.log("dependency");
+desc("Lint everything");
+task("lint", [], function () {
+    var lint = require("./lint/lint_runner.js");
+    lint.validateFile("Jakefile.js", {}, {});
 });
 
 var colors = {
