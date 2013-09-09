@@ -63,6 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\AgileWorkflow - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\AgileWorkflow - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
