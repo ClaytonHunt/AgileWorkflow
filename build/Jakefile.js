@@ -1,5 +1,5 @@
 desc("Build Everything");
-task("default", [], function () {
+task("default", ["lint"], function () {
     console.log("");
     console.log(colors.green + "------");
     console.log("* OK *");

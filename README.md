@@ -1,5 +1,6 @@
 AgileWorkflow
 =============
 
-Prerequisites
-- Node 0.10.18
+To build:
+- Assumes presence of Node.JS
+- Run ./build/jake.bat
