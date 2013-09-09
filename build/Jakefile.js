@@ -1,4 +1,7 @@
-desc("Build Everything");
+/*global task */
+
+"use strict";
+
 task("default", ["lint"], function () {
     console.log("");
     console.log(colors.green + "------");
@@ -7,9 +10,32 @@ task("default", ["lint"], function () {
 });
 
 desc("Lint everything");
-task("lint", [], function () {
+task("lint", ["lint node", "lint browser"]);
+
+task("lint node", [], function () {
     var lint = require("./lint/lint_runner.js");
-    lint.validateFile("Jakefile.js", {}, {});
+
+    var files = new jake.FileList();
+    files.include("Jakefile.js");
+
+    var lintOptions = {
+        node: true
+    };
+
+    lint.validateFileList(files.toArray(), lintOptions, {});
+});
+
+task("lint browser", [], function () {
+    var lint = require("./lint/lint_runner.js");
+
+    var files = new jake.FileList();
+    files.include("../src/**/*.js");
+
+    var lintOptions = {
+        browser: true
+    };
+
+    lint.validateFileList(files.toArray(), lintOptions, {});
 });
 
 var colors = {
