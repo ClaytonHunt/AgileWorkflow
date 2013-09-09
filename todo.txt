@@ -15,8 +15,5 @@ User Stories
 - Marketing Copy
 
 Engineering Tasks
-* Create Repository
-- Create Empty Project
-- Setup Site Build
-- Setup one button deploy
+* Setup Site Build
 - Configure DNS
