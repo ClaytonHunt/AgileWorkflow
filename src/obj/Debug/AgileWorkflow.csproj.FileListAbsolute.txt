@@ -1,5 +1,0 @@
-C:\projects\AgileWorkflow\src\bin\AgileWorkflow.dll
-C:\projects\AgileWorkflow\src\bin\AgileWorkflow.pdb
-C:\projects\AgileWorkflow\src\obj\Debug\AgileWorkflow.csprojResolveAssemblyReference.cache
-C:\projects\AgileWorkflow\src\obj\Debug\AgileWorkflow.dll
-C:\projects\AgileWorkflow\src\obj\Debug\AgileWorkflow.pdb

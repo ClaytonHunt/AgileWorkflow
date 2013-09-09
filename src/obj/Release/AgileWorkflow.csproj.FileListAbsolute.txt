@@ -1,4 +1,0 @@
-C:\projects\AgileWorkflow\src\bin\AgileWorkflow.dll
-C:\projects\AgileWorkflow\src\bin\AgileWorkflow.pdb
-C:\projects\AgileWorkflow\src\obj\Release\AgileWorkflow.dll
-C:\projects\AgileWorkflow\src\obj\Release\AgileWorkflow.pdb
