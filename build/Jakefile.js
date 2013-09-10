@@ -1,5 +1,4 @@
-/*global task */
-
+/*global desc, task, jake */
 "use strict";
 
 task("default", ["lint"], function () {
