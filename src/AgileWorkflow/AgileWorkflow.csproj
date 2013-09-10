@@ -136,8 +136,6 @@
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jasmine\jasmine-html.js" />
-    <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\sample_test.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -160,9 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\jasmine\MIT.LICENSE" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -43,7 +43,7 @@
         var lint = require("./lint/lint_runner.js");
 
         var files = new jake.FileList();
-        files.include("../src/**/*.js");
+        files.include("../src/Agileworkflow/Scripts/**/*.js");
 
         var lintOptions = {
             browser: true,
@@ -60,7 +60,8 @@
             undef: true,
             strict: true,
             trailing: true,
-            white: true
+            white: true,
+            passfail: true
         };
 
         var passed = lint.validateFileList(files.toArray(), lintOptions, {});
