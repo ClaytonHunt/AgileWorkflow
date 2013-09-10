@@ -15,6 +15,6 @@ User Stories
 - Marketing Copy
 
 Engineering Tasks
-- Add jasmine
+* Add jasmine
 - Setup Site Build
 - Configure DNS

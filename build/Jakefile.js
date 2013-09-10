@@ -60,6 +60,7 @@
             undef: true,
             strict: true,
             trailing: true,
+            white: true
         };
 
         var passed = lint.validateFileList(files.toArray(), lintOptions, {});
