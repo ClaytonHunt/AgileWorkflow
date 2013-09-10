@@ -15,8 +15,6 @@ User Stories
 - Marketing Copy
 
 Engineering Tasks
-* Add Linting
 - Add jasmine
-- Add karma
 - Setup Site Build
 - Configure DNS
