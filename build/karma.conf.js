@@ -14,13 +14,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'Agileworkflow/Scripts/**/*.js'
+      'Agileworkflow/Scripts/thirdParty/**/*.js',
+      'Agileworkflow/Scripts/application/**/*.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-      
+      'Agileworkflow/Scripts/thirdParty/jasmine/*.js',
     ],
 
 

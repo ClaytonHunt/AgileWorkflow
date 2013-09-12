@@ -43,7 +43,7 @@
         var lint = require("./lint/lint_runner.js");
 
         var files = new jake.FileList();
-        files.include("../src/Agileworkflow/Scripts/**/*.js");
+        files.include("../src/Agileworkflow/Scripts/application/**/*.js");
 
         var lintOptions = {
             browser: true,
