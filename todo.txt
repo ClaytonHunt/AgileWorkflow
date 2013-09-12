@@ -15,6 +15,12 @@ User Stories
 - Marketing Copy
 
 Engineering Tasks
-* Add jasmine
+- copy required msbuild files to project dir
+- Add msbuild to jake
+- Add running of MSTest to jake
+- Create Page
+- Add Hello World Header Tag
+
+Future Items
 - Setup Site Build
 - Configure DNS
