@@ -1,1 +1,4 @@
-*.*ncrunch*
+**/*.*ncrunch*
+**/bin/**/*.*
+**/obj/**/*.*
+**/Properties/PublishProfiles/**/*.*
