@@ -71,11 +71,17 @@
     desc("Start Karma");
     task("karma", function () {
         var config = {};
-        sh("node node_modules/karma/bin/karma start");
+        sh("START node node_modules/karma/bin/karma start");
     });
 
     desc("Test Everything");
-    task("test", ["test client"]);
+    task("test", ["test server", "test client"]);
+
+    desc("Test Server Code");
+    task("test server", [], function () {
+        sh(".\\microsoft\\vstest.console.exe ..\\src\\AgileWorkflow.UnitTests\\bin\\Debug\\AgileWorkflow.UnitTests.dll /UseVsixExtensions:true",
+            colors.red + "SERVER TESTS FAILED" + colors.reset, complete);
+    }, { async: true });
 
     desc("Test Browser Code");
     task("test client", [], function () {
