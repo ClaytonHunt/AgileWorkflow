@@ -21,7 +21,9 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'Agileworkflow/**/*.intellisense*.js',
       'Agileworkflow/Scripts/thirdParty/jasmine/*.js',
+      'Agileworkflow/Scripts/thirdParty/bootstrap/*.js'
     ],
 
 
