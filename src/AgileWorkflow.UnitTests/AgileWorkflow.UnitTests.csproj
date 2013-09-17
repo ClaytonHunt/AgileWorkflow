@@ -53,6 +53,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileWorkflow\AgileWorkflow.csproj">
+      <Project>{A226783A-4A89-49E7-9A42-8E11B91652C2}</Project>
+      <Name>AgileWorkflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

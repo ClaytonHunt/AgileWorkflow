@@ -12,7 +12,7 @@ namespace AgileWorkflow.App_Start
             routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",
-                new { controller = "Jasmine", action = "Run", id = UrlParameter.Optional }
+                new { controller = "Dashboard", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
