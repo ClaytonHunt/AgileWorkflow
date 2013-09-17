@@ -2,6 +2,11 @@
 (function () {
     "use strict";
 
+    desc("Deploy to GitHub and Azure");
+    task("deploy", ["default"], function() {
+        sh("git push", colors.red + "DEPLOY FAILED" + colors.reset, complete);
+    }, { async: true });
+
     task("default", ["lint", "test"], function () {
         console.log("");
         console.log(colors.green + "------");
@@ -78,9 +83,14 @@
     task("test", ["test server", "test client"]);
 
     desc("Test Server Code");
-    task("test server", [], function () {
-        sh(".\\microsoft\\vstest.console.exe ..\\src\\AgileWorkflow.UnitTests\\bin\\Debug\\AgileWorkflow.UnitTests.dll /UseVsixExtensions:true",
+    task("test server", ["build server"], function () {
+        sh(".\\microsoft\\test\\vstest.console.exe ..\\src\\AgileWorkflow.UnitTests\\bin\\Debug\\AgileWorkflow.UnitTests.dll /UseVsixExtensions:true",
             colors.red + "SERVER TESTS FAILED" + colors.reset, complete);
+    }, { async: true });
+
+    desc("Build .Net Code");
+    task("build server", [], function () {
+        sh(".\\microsoft\\build\\msbuild ..\\src\\AgileWorkflow.sln", colors.red + "SERVER BUILD FAILED" + colors.reset, complete);
     }, { async: true });
 
     desc("Test Browser Code");
