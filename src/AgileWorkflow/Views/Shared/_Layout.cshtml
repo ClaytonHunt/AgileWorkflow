@@ -1,15 +1,33 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
     <script src="~/Scripts/thirdParty/jquery/jquery-1.9.1.min.js"></script>
     <script src="~/Scripts/thirdParty/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-    @RenderBody()    
+    <a class="sr-only" href="#content">Skip navigation</a>
+    @Html.Partial("_Navigation")
+    <div class="bs-header" id="content">
+        <div class="container">
+            <h1>@ViewBag.Title</h1>
+            <p>@ViewBag.SubTitle</p>
+            @Html.Partial("_Advertisements")
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">            
+        </div>
+    </footer>    
 </body>
 </html>
