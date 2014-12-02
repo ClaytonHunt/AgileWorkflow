@@ -13,11 +13,22 @@
         describe('Controller: KanbanCtrl', function () {
             var scope;
             var ctrl;
+            var fakeSprintService;
+            var deferred;
 
-            beforeEach(inject(function ($rootScope, $controller) {
+            beforeEach(inject(function ($rootScope, $controller, $q) {
                 scope = $rootScope.$new();
+
+                fakeSprintService = {
+                    getAll: function () {
+                        deferred = $q.defer();
+                        return deferred.promise;
+                    }
+                }
+
                 ctrl = $controller('KanbanCtrl', {
-                    $scope: scope
+                    $scope: scope,
+                    sprintService: fakeSprintService
                 });
             }));
 
@@ -26,6 +37,10 @@
             });
 
             describe('Kanban: sprints', function () {
+                beforeEach(function() {
+                    deferred.resolve([{}, {}, {}]);
+                });
+
                 it('is defined', function() {
                     expect(scope.sprints).toBeDefined();
                 });
@@ -34,11 +49,20 @@
                     expect(scope.sprints instanceof Array).toBeTruthy();
                 });
 
-                it('is populated on controller load', function() {
+                it('is populated on controller load', function () {
+                    spyOn(fakeSprintService, 'getAll').and.callThrough();
+
+                    scope.init();                    
+                    scope.$root.$digest();
+
+                    expect(fakeSprintService.getAll).toHaveBeenCalled();
                     expect(scope.sprints.length).toBe(3);
                 });
 
-                it('is populated with sprints', function() {
+                it('is populated with sprints', function () {
+                    scope.init();                    
+                    scope.$root.$digest();
+
                     expect(scope.sprints[0] instanceof mod.Sprint).toBeTruthy();
                 });
             });

@@ -22,11 +22,17 @@
 (function (mod) {
     'use strict';
 
-    angular.module('agileApp').controller('KanbanCtrl', ['$scope', function ($scope) {
-        $scope.sprints = [
-            new mod.Sprint(),
-            new mod.Sprint(),
-            new mod.Sprint()
-        ];
+    angular.module('agileApp').controller('KanbanCtrl', ['$scope', 'sprintService', function ($scope, sprintService) {
+        $scope.sprints = [];
+
+        $scope.init = function() {
+            sprintService.getAll().then(function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    $scope.sprints.push(new mod.Sprint(item));
+                }                
+            });
+        }
+
+        $scope.init();
     }]);
 }(Agile));
