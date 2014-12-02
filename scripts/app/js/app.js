@@ -8,6 +8,7 @@
 
         self.start = data.start || '*';
         self.end = data.end || '*';
+        self.get_cards = data.get_cards || null;
     };
 }(Agile));
 

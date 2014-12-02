@@ -85,5 +85,20 @@
                 expect(s.end).toBe('01/01/2014');
             });
         });
+
+        describe('get_cards', function() {
+            it('has get_cards', function() {
+                expect(sprint.get_cards).toBeDefined();
+            });
+
+            it('defaults get_cards to null', function() {
+                expect(sprint.get_cards).toBe(null);
+            });
+
+            it('populates get_cards from data', function () {
+                var s = new mod.Sprint({ get_cards: 'resource_path' });
+                expect(s.get_cards).toBe('resource_path');
+            });
+        });
     });
 }(Agile));
