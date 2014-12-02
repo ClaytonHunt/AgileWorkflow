@@ -2,25 +2,13 @@ Agile Workflow
 --------------
 
 Minimum Marketable Feature:
-* Marketing Homepage
-- ToDo list
-- Login
-- Tomato Timer
-- Kanban board from todo list
+* Kanban board
 - Sprint/Iteration concept
 
 User Stories
-* (Hello World) Homepage
-- Base Design Layout
-- Marketing Copy
+
 
 Engineering Tasks
-- copy required msbuild files to project dir
-- Add msbuild to jake
-- Add running of MSTest to jake
-- Create Page
-- Add Hello World Header Tag
+
 
 Future Items
-- Setup Site Build
-- Configure DNS
